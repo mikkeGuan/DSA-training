@@ -11,13 +11,14 @@ Head = SinglyNode(1)
 A = SinglyNode(2)
 B = SinglyNode(3)
 C = SinglyNode(6)
-D = SinglyNode(555)
+D = SinglyNode(223)
 E = SinglyNode(10000)
 
 Head.next = A
 A.next = B
 B.next = C
 C.next = D
+D.next = E
 
 # print(Head)
  
@@ -35,7 +36,7 @@ def display(head):
     while current:
         elements.append(str(current.val))
         current = current.next
-   # print("  -> next in the list is:  ".join(elements))
+    print("  -> next in the list:  ".join(elements))
 
 display(Head)
 
@@ -49,7 +50,7 @@ def search(head, val):
         
     return False
 
-result = search(Head, 555)
+result = search(Head, 112)
 print(result)
 
 
@@ -80,7 +81,7 @@ display(head)
 #Display doubly linked list - O(n)
 def displayDoubly(head):
     curr = head
-    elements = []
+    elements     = []
     while curr:
         elements.append(str(curr.val))
         curr = curr.next
